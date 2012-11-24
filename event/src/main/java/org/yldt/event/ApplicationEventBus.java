@@ -219,7 +219,7 @@ public class ApplicationEventBus implements EventBus {
 		}
 		
 		Class<?> superClass = klass.getSuperclass();
-		if(klass != null && klass != Object.class)
+		if(superClass != null && superClass != Object.class)
 			interfaces.addAll(collectAllEventInterfaces(superClass));
 		return interfaces;
 	}
